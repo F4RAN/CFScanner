@@ -19,8 +19,8 @@ from utils.os import create_dir
 log = CLogger("cfscanner-python")
 
 SCRIPTDIR = os.path.dirname(os.path.realpath(__file__))
-CONFIGDIR = f"{SCRIPTDIR}/../config"
-RESULTDIR = f"{SCRIPTDIR}/../result"
+CONFIGDIR = os.path.join(SCRIPTDIR, "config")
+RESULTDIR = os.path.join(SCRIPTDIR, "result")   
 START_DT_STR = datetime.now().strftime(r"%Y%m%d_%H%M%S")
 INTERIM_RESULTS_PATH = os.path.join(RESULTDIR, f'{START_DT_STR}_result.csv')
 
