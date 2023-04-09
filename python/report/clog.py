@@ -117,8 +117,7 @@ class CLogger(object):
 
         # create log folder if not exist already
         log_dir_path = os.path.join(PATH, "log")
-        if not os.path.isdir(log_dir_path):
-            os.mkdir(log_dir_path)
+        os.makedirs(log_dir_path, exist_ok=True)
 
         filename = os.path.join(log_dir_path, f"{module}.log")
         file_handler = _TRFH(
