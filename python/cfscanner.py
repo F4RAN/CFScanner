@@ -26,6 +26,7 @@ INTERIM_RESULTS_PATH = os.path.join(RESULTDIR, f'{START_DT_STR}_result.csv')
 
 
 if __name__ == "__main__":
+    multiprocessing.freeze_support()
     args = parse_args()
 
     if not args.no_vpn:
