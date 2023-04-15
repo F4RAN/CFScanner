@@ -27,6 +27,7 @@ def start_proxy_service(
     proxy_port = proxy_conf["inbounds"][0]["port"]
     proxy_process = subprocess.Popen(
         [binary_path, "-c", proxy_conf_path],
+        stdin=subprocess.DEVNULL,
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL
     )
